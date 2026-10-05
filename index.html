@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEASURE QUEST — Ekspedisi Negeri Pengukuran</title>
+  <meta name="description" content="Game edukasi Fisika interaktif untuk Madrasah Aliyah. Pelajari pengukuran melalui petualangan seru di Negeri Pengukuran.">
+  <meta name="keywords" content="game edukasi, fisika, pengukuran, madrasah aliyah, kurikulum merdeka">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- MathJax 3 -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      startup: {
+        pageReady: () => {
+          return MathJax.startup.defaultPageReady();
+        }
+      }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="src/styles/global.css">
+  <link rel="stylesheet" href="src/styles/game.css">
+  <link rel="stylesheet" href="src/styles/responsive.css">
+</head>
+<body>
+  <div id="game-root"></div>
+
+  <!-- Audio elements -->
+  <div id="audio-container" style="display:none;"></div>
+
+  <!-- Core Scripts -->
+  <script src="src/data/developer.js"></script>
+  <script src="src/data/characters.js"></script>
+  <script src="src/data/maps.js"></script>
+  <script src="src/data/badges.js"></script>
+  <script src="src/data/questions.js"></script>
+
+  <script src="src/core/GameState.js"></script>
+  <script src="src/core/AudioManager.js"></script>
+  <script src="src/core/AssetManager.js"></script>
+  <script src="src/core/ProgressManager.js"></script>
+
+  <script src="src/systems/QuizManager.js"></script>
+  <script src="src/systems/ScoreManager.js"></script>
+  <script src="src/systems/BadgeManager.js"></script>
+  <script src="src/systems/MathRenderer.js"></script>
+  <script src="src/systems/PDFReportManager.js"></script>
+
+  <script src="src/scenes/CoverScene.js"></script>
+  <script src="src/scenes/IdentityScene.js"></script>
+  <script src="src/scenes/CharacterScene.js"></script>
+  <script src="src/scenes/WorldMapScene.js"></script>
+  <script src="src/scenes/Map1Scene.js"></script>
+  <script src="src/scenes/Map2Scene.js"></script>
+  <script src="src/scenes/Map3Scene.js"></script>
+  <script src="src/scenes/Map4Scene.js"></script>
+  <script src="src/scenes/Map5Scene.js"></script>
+  <script src="src/scenes/Map6Scene.js"></script>
+  <script src="src/scenes/FinalBossScene.js"></script>
+  <script src="src/scenes/VictoryScene.js"></script>
+  <script src="src/scenes/ReflectionScene.js"></script>
+  <script src="src/scenes/ResultScene.js"></script>
+  <script src="src/scenes/DeveloperScene.js"></script>
+  <script src="src/scenes/GuideScene.js"></script>
+  <script src="src/scenes/ObjectivesScene.js"></script>
+
+  <!-- Main App -->
+  <script src="src/main.js"></script>
+</body>
+</html>
